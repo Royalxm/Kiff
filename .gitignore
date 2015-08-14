@@ -30,3 +30,31 @@
 
 # Debug files
 *.dSYM/
+
+# Hidden files
+*~
+
+# Folders
+out
+.deps
+
+# Autotools
+aclocal.m4
+autom4te.cache
+compile
+config.guess
+config.sub
+config.log
+configure
+install-sh
+ltmain.sh
+missing
+ar-lib
+config.status
+libtool
+depcomp
+install_manifest.txt
+COPYING
+INSTALL
+Makefile
+Makefile.in
