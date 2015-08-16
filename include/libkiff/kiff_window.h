@@ -21,18 +21,30 @@ typedef struct _KiffWindowPrivate KiffWindowPrivate;
 
 struct _KiffWindow
 {
-     GObject parent_instance;
+  GObject parent_instance;
 
-     KiffWindowPrivate *priv;
+  KiffWindowPrivate *priv;
 };
 
 struct _KiffWindowClass
 {
-     GObjectClass parent_class;
+  GObjectClass parent_class;
 };
 
-GType kiff_window_get_type (void);
+#ifdef __cplusplus
+extern "C" {
+#endif
+  
+  GType kiff_window_get_type (void);
+  
+  KiffWindow *kiff_window_new (void);
 
-void kiff_window_start_app (KiffWindow *self, GtkApplication *app);
+  KiffWindow *kiff_window_new_with_params (const gchar *title, guint width, guint height);
 
+  void kiff_window_start_app (KiffWindow *self, GtkApplication *app);
+
+#ifdef __cplusplus
+}
+#endif
+  
 #endif
