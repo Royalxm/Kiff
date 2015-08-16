@@ -36,11 +36,13 @@ extern "C" {
 #endif
   
   GType kiff_window_get_type (void);
+
+  KiffWindow *kiff_window_new (const gchar *title, guint width, guint height);
   
-  KiffWindow *kiff_window_new (void);
+  KiffWindow *kiff_window_popup_new (const gchar *title, guint width, guint height);
 
-  KiffWindow *kiff_window_new_with_params (const gchar *title, guint width, guint height);
-
+  void kiff_window_show (KiffWindow *self);
+  
   void kiff_window_start_app (KiffWindow *self, GtkApplication *app);
 
 #ifdef __cplusplus
